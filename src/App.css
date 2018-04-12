@@ -1,0 +1,21 @@
+.imageLocation {
+	background-image: url('2.jpg');
+	background-size: cover;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: center;
+}
+.p {
+	align-self: center;
+}
+.signin {
+	margin-left: 133px;
+}
+
+.register {
+	margin-left: 10px;
+}
+
+.alert {
+	margin-top: 30px;
+}
