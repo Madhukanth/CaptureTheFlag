@@ -16,7 +16,7 @@ exports.signup = (req, res, next) => {
       console.log('hello');
       return res.send({
         success: 'false',
-        error: 'please provide all the details',
+        error: 'please provide all the details'
       });
     }
 
@@ -30,10 +30,10 @@ exports.signup = (req, res, next) => {
       password,
       name,
       regno,
-      points,
+      points
     });
 
-    user.save((error) => {
+    user.save(error => {
       if (error) {
         return next(error);
       }

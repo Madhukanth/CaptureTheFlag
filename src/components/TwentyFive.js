@@ -31,7 +31,7 @@ class TwentyFive extends Component {
 			this.setState({ answer: 'true' });
 			axios({
 				method: 'POST',
-				url: 'http://192.168.43.228:3090/points',
+				url: 'https://still-wave-40104.herokuapp.com/points',
 				data: {
 					email: this.props.email,
 					points: this.props.points

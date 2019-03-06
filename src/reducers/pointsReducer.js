@@ -35,7 +35,7 @@ import {
   QUESTION_32,
   QUESTION_33,
   QUESTION_34,
-  QUESTION_35,
+  QUESTION_35
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -75,7 +75,7 @@ const INITIAL_STATE = {
   question32: true,
   question33: true,
   question34: true,
-  question35: true,
+  question35: true
 };
 
 export default (state = INITIAL_STATE, action) => {

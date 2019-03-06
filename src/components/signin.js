@@ -7,22 +7,22 @@ import { Alert } from 'react-bootstrap';
 import {
   emailChanged,
   passwordChanged,
-  loginSuccess,
+  loginSuccess
 } from '../actions/authActions';
 import '../App.css';
 
 class Signin extends Component {
   state = {
-    show: false,
+    show: false
   };
   login = () => {
     axios({
       method: 'POST',
-      url: 'http://192.168.43.228:3090/login',
+      url: 'https://still-wave-40104.herokuapp.com/login',
       data: {
         email: this.props.email.toLowerCase(),
-        password: this.props.password,
-      },
+        password: this.props.password
+      }
     }).then(res => {
       if (res.data.success === 'true') {
         console.log(res.data.success);
@@ -40,7 +40,7 @@ class Signin extends Component {
             style={{
               marginTop: 100,
               width: 400,
-              flex: 1,
+              flex: 1
             }}
           >
             <div
@@ -93,10 +93,13 @@ class Signin extends Component {
 
 const mapStateToProps = state => ({
   email: state.auth.email,
-  password: state.auth.password,
+  password: state.auth.password
 });
-export default connect(mapStateToProps, {
-  emailChanged,
-  passwordChanged,
-  loginSuccess,
-})(withRouter(Signin));
+export default connect(
+  mapStateToProps,
+  {
+    emailChanged,
+    passwordChanged,
+    loginSuccess
+  }
+)(withRouter(Signin));
